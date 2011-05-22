@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dead Startups</title>
+
+<script type="text/javascript" src="http://use.typekit.com/huh0nyj.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <%= javascript_include_tag :defaults %>
+	<%= javascript_include_tag 'jquery.tokeninput.js'%>
+	<%= javascript_include_tag 'jquery.validate.min.js'%>
+  <%= csrf_meta_tag %>
+  <%= stylesheet_link_tag :all %>
+</head>
+<body>
+
+<div id="main-container">
+	<header>
+		<h1><%= link_to root_path do %><span class="dead tk-bodedo">Dead</span><span class="normal">Startups</span><%end%></h1>
+	<p class="headline">Keeping track of startups that have failed. Instead of forgetting them, lets learn from their mistakes.</p>	
+	</header>
+
+	<%=yield%>
+
+</div>
+
+</body>
+</html>

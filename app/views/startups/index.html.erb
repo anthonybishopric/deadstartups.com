@@ -1,0 +1,39 @@
+
+<ul class="startups">
+<%= render @startups%>
+</ul>
+<%= paginate @startups%>
+
+<% if flash[:errors]%>
+	
+	<ul class="errors">
+		<% flash[:errors].each do |error|%>
+			<li><%= error %></li>
+		<%end%>
+	</ul>
+	
+<%end%>
+
+<%= form_for Startup.new, :html => {:honeypot => true, :class => 'validated'} do |form|%>
+
+
+	<span class="other-fields">
+	<%= form.label :name%>
+	<%= form.text_field :name , :class => 'required'%>
+	<%= form.label :website%>
+	<%= form.text_field :website, :class => 'url required', :value => 'http://' %>
+	<%= form.label :born%>
+	<%= form.text_field :born, :class => 'date required'%>
+	<%= form.label :died%>
+	<%= form.text_field :died, :class => 'date required'%>
+	<%= form.label :tag_id_list, "Tags"%>
+	<%= form.text_field :tag_id_list, :id => 'tags', :class => 'required'%>
+	</span>
+	<span class="reason">
+		<%= form.label :reason%>
+		<%= form.text_area :reason, :class => 'required'%>
+	</span>
+	<span class="rip">
+	<%= form.submit 'Rest in Peace', :class => 'white-button'%>
+	</span>
+<%end%>

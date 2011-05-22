@@ -1,0 +1,124 @@
+@import '_reset.scss';
+@import '_960.scss';
+@import '_all.scss';
+
+$d_purple: #7B00aF;
+
+body, html{
+	font-family: 'futura', sans-serif;
+	height: 100%;
+	background-color: #222;
+	color: white;
+
+}
+
+h1 a{
+	text-decoration:none;
+	color: inherit;
+}
+
+#main-container{
+	@extend .container_12;
+	form{
+		@extend .container_8;
+		display: block;
+		padding: 10px 10px;
+		.other-fields{
+			input{
+						display:block;
+			}
+		
+			padding: 4px 0px;
+			color:$d_purple;
+			@extend .grid_3;
+	
+			@include box-shadow(4px 4px 2px 5px #222 );
+		}
+		.reason{
+			@extend .grid_4;
+		
+		}
+		.rip{
+			@extend .grid_1;
+		}
+	}
+}
+
+header{
+	h1{
+		font-size:3em;
+	}
+	p{
+		font-size: 1em;
+	}
+	padding: 0px 20px;
+	display: block;
+	height: 130px;
+	line-height:60px;
+	width:100%;
+	color: black;
+	.normal{
+		color: white;
+	}
+	@include box-shadow(-3px -4px 8px 2px #ccc inset);
+	@include linear-gradient(#ccc, #999);
+	@include border-radius(3px);
+}
+
+ul.startups{
+	@extend .container_8;
+	li.startup{
+		border-bottom:1px solid #ddd;
+		padding: 8px 10px;
+	}
+}
+
+.startup{
+	h3{
+		font-size:1.5em;
+	}
+	h4{
+		padding: 2px;
+		font-size: .85em;
+	}
+	h5{
+		padding: 2px;
+		font-size: .75em;
+	}
+	.reason{
+		padding: 10px;
+	}
+}
+
+.white-button{
+	font-size:2em;
+	@include border_radius(8px);
+	@include linear_gradient(#fff, #aaa);
+	@include box-shadow(0px -1px 1px #fff inset);
+	padding: 2px 3px;
+	border: 1px solid #ddd;
+	&:hover{
+		border:1px solid transparent;
+		text-decoration:none;
+		@include linear_gradient($d_purple +#323, $d_purple);
+		@include box-shadow(0px -1px 1px transparentize($d_purple +#323, .8));
+		text-shadow: -1px -1px 0 $d_purple - #222;
+		color:white;
+		cursor: pointer;
+	}
+	&:active{
+		@include linear_gradient($d_purple - #203040, $d_purple);
+		@include box-shadow(0px -1px 1px transparentize($d_purple, .8));
+		text-shadow: -1px -1px 0 $d_purple - #222;
+		color:white;
+	}
+
+}
+
+input.white-button{
+	border: 1px solid transparent;
+}
+
+.token-input-delete-token{
+	cursor: pointer;
+}

@@ -1,0 +1,653 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+  960 Grid System ~ Core CSS.
+  Learn more ~ http://960.gs/
+
+  Licensed under GPL and MIT.
+*/
+/*
+  Forces backgrounds to span full width,
+  even if there is horizontal scrolling.
+  Increase this if your layout is wider.
+
+  Note: IE6 works fine without this fix.
+*/
+body {
+  min-width: 960px; }
+
+/* `Containers
+----------------------------------------------------------------------------------------------------*/
+.container_12, #main-container,
+.container_16 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px; }
+
+/* `Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+.grid_1, #main-container form .rip,
+.grid_2,
+.grid_3,
+#main-container form .other-fields, #main-container form
+.other-fields,
+.grid_4,
+#main-container form .reason, #main-container form
+.reason,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12,
+.grid_13,
+.grid_14,
+.grid_15,
+.grid_16 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.push_1, .pull_1,
+.push_2, .pull_2,
+.push_3, .pull_3,
+.push_4, .pull_4,
+.push_5, .pull_5,
+.push_6, .pull_6,
+.push_7, .pull_7,
+.push_8, .pull_8,
+.push_9, .pull_9,
+.push_10, .pull_10,
+.push_11, .pull_11,
+.push_12, .pull_12,
+.push_13, .pull_13,
+.push_14, .pull_14,
+.push_15, .pull_15 {
+  position: relative; }
+
+.container_12 .grid_3, #main-container .grid_3, .container_12 #main-container form .other-fields, #main-container form .container_12 .other-fields, #main-container form .other-fields,
+.container_16 .grid_4,
+.container_16 #main-container form .reason, #main-container form
+.container_16 .reason {
+  width: 220px; }
+
+.container_12 .grid_6, #main-container .grid_6,
+.container_16 .grid_8 {
+  width: 460px; }
+
+.container_12 .grid_9, #main-container .grid_9,
+.container_16 .grid_12 {
+  width: 700px; }
+
+.container_12 .grid_12, #main-container .grid_12,
+.container_16 .grid_16 {
+  width: 940px; }
+
+/* `Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+.alpha {
+  margin-left: 0; }
+
+.omega {
+  margin-right: 0; }
+
+/* `Grid >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+.container_12 .grid_1, #main-container .grid_1, .container_12 #main-container form .rip, #main-container form .container_12 .rip, #main-container form .rip {
+  width: 60px; }
+
+.container_12 .grid_2, #main-container .grid_2 {
+  width: 140px; }
+
+.container_12 .grid_4, #main-container .grid_4, .container_12 #main-container form .reason, #main-container form .container_12 .reason, #main-container form .reason {
+  width: 300px; }
+
+.container_12 .grid_5, #main-container .grid_5 {
+  width: 380px; }
+
+.container_12 .grid_7, #main-container .grid_7 {
+  width: 540px; }
+
+.container_12 .grid_8, #main-container .grid_8 {
+  width: 620px; }
+
+.container_12 .grid_10, #main-container .grid_10 {
+  width: 780px; }
+
+.container_12 .grid_11, #main-container .grid_11 {
+  width: 860px; }
+
+/* `Grid >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+.container_16 .grid_1, .container_16 #main-container form .rip, #main-container form .container_16 .rip {
+  width: 40px; }
+
+.container_16 .grid_2 {
+  width: 100px; }
+
+.container_16 .grid_3, .container_16 #main-container form .other-fields, #main-container form .container_16 .other-fields {
+  width: 160px; }
+
+.container_16 .grid_5 {
+  width: 280px; }
+
+.container_16 .grid_6 {
+  width: 340px; }
+
+.container_16 .grid_7 {
+  width: 400px; }
+
+.container_16 .grid_9 {
+  width: 520px; }
+
+.container_16 .grid_10 {
+  width: 580px; }
+
+.container_16 .grid_11 {
+  width: 640px; }
+
+.container_16 .grid_13 {
+  width: 760px; }
+
+.container_16 .grid_14 {
+  width: 820px; }
+
+.container_16 .grid_15 {
+  width: 880px; }
+
+/* `Prefix Extra Space >> Global
+----------------------------------------------------------------------------------------------------*/
+.container_12 .prefix_3, #main-container .prefix_3,
+.container_16 .prefix_4 {
+  padding-left: 240px; }
+
+.container_12 .prefix_6, #main-container .prefix_6,
+.container_16 .prefix_8 {
+  padding-left: 480px; }
+
+.container_12 .prefix_9, #main-container .prefix_9,
+.container_16 .prefix_12 {
+  padding-left: 720px; }
+
+/* `Prefix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+.container_12 .prefix_1, #main-container .prefix_1 {
+  padding-left: 80px; }
+
+.container_12 .prefix_2, #main-container .prefix_2 {
+  padding-left: 160px; }
+
+.container_12 .prefix_4, #main-container .prefix_4 {
+  padding-left: 320px; }
+
+.container_12 .prefix_5, #main-container .prefix_5 {
+  padding-left: 400px; }
+
+.container_12 .prefix_7, #main-container .prefix_7 {
+  padding-left: 560px; }
+
+.container_12 .prefix_8, #main-container .prefix_8 {
+  padding-left: 640px; }
+
+.container_12 .prefix_10, #main-container .prefix_10 {
+  padding-left: 800px; }
+
+.container_12 .prefix_11, #main-container .prefix_11 {
+  padding-left: 880px; }
+
+/* `Prefix Extra Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+.container_16 .prefix_1 {
+  padding-left: 60px; }
+
+.container_16 .prefix_2 {
+  padding-left: 120px; }
+
+.container_16 .prefix_3 {
+  padding-left: 180px; }
+
+.container_16 .prefix_5 {
+  padding-left: 300px; }
+
+.container_16 .prefix_6 {
+  padding-left: 360px; }
+
+.container_16 .prefix_7 {
+  padding-left: 420px; }
+
+.container_16 .prefix_9 {
+  padding-left: 540px; }
+
+.container_16 .prefix_10 {
+  padding-left: 600px; }
+
+.container_16 .prefix_11 {
+  padding-left: 660px; }
+
+.container_16 .prefix_13 {
+  padding-left: 780px; }
+
+.container_16 .prefix_14 {
+  padding-left: 840px; }
+
+.container_16 .prefix_15 {
+  padding-left: 900px; }
+
+/* `Suffix Extra Space >> Global
+----------------------------------------------------------------------------------------------------*/
+.container_12 .suffix_3, #main-container .suffix_3,
+.container_16 .suffix_4 {
+  padding-right: 240px; }
+
+.container_12 .suffix_6, #main-container .suffix_6,
+.container_16 .suffix_8 {
+  padding-right: 480px; }
+
+.container_12 .suffix_9, #main-container .suffix_9,
+.container_16 .suffix_12 {
+  padding-right: 720px; }
+
+/* `Suffix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+.container_12 .suffix_1, #main-container .suffix_1 {
+  padding-right: 80px; }
+
+.container_12 .suffix_2, #main-container .suffix_2 {
+  padding-right: 160px; }
+
+.container_12 .suffix_4, #main-container .suffix_4 {
+  padding-right: 320px; }
+
+.container_12 .suffix_5, #main-container .suffix_5 {
+  padding-right: 400px; }
+
+.container_12 .suffix_7, #main-container .suffix_7 {
+  padding-right: 560px; }
+
+.container_12 .suffix_8, #main-container .suffix_8 {
+  padding-right: 640px; }
+
+.container_12 .suffix_10, #main-container .suffix_10 {
+  padding-right: 800px; }
+
+.container_12 .suffix_11, #main-container .suffix_11 {
+  padding-right: 880px; }
+
+/* `Suffix Extra Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+.container_16 .suffix_1 {
+  padding-right: 60px; }
+
+.container_16 .suffix_2 {
+  padding-right: 120px; }
+
+.container_16 .suffix_3 {
+  padding-right: 180px; }
+
+.container_16 .suffix_5 {
+  padding-right: 300px; }
+
+.container_16 .suffix_6 {
+  padding-right: 360px; }
+
+.container_16 .suffix_7 {
+  padding-right: 420px; }
+
+.container_16 .suffix_9 {
+  padding-right: 540px; }
+
+.container_16 .suffix_10 {
+  padding-right: 600px; }
+
+.container_16 .suffix_11 {
+  padding-right: 660px; }
+
+.container_16 .suffix_13 {
+  padding-right: 780px; }
+
+.container_16 .suffix_14 {
+  padding-right: 840px; }
+
+.container_16 .suffix_15 {
+  padding-right: 900px; }
+
+/* `Push Space >> Global
+----------------------------------------------------------------------------------------------------*/
+.container_12 .push_3, #main-container .push_3,
+.container_16 .push_4 {
+  left: 240px; }
+
+.container_12 .push_6, #main-container .push_6,
+.container_16 .push_8 {
+  left: 480px; }
+
+.container_12 .push_9, #main-container .push_9,
+.container_16 .push_12 {
+  left: 720px; }
+
+/* `Push Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+.container_12 .push_1, #main-container .push_1 {
+  left: 80px; }
+
+.container_12 .push_2, #main-container .push_2 {
+  left: 160px; }
+
+.container_12 .push_4, #main-container .push_4 {
+  left: 320px; }
+
+.container_12 .push_5, #main-container .push_5 {
+  left: 400px; }
+
+.container_12 .push_7, #main-container .push_7 {
+  left: 560px; }
+
+.container_12 .push_8, #main-container .push_8 {
+  left: 640px; }
+
+.container_12 .push_10, #main-container .push_10 {
+  left: 800px; }
+
+.container_12 .push_11, #main-container .push_11 {
+  left: 880px; }
+
+/* `Push Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+.container_16 .push_1 {
+  left: 60px; }
+
+.container_16 .push_2 {
+  left: 120px; }
+
+.container_16 .push_3 {
+  left: 180px; }
+
+.container_16 .push_5 {
+  left: 300px; }
+
+.container_16 .push_6 {
+  left: 360px; }
+
+.container_16 .push_7 {
+  left: 420px; }
+
+.container_16 .push_9 {
+  left: 540px; }
+
+.container_16 .push_10 {
+  left: 600px; }
+
+.container_16 .push_11 {
+  left: 660px; }
+
+.container_16 .push_13 {
+  left: 780px; }
+
+.container_16 .push_14 {
+  left: 840px; }
+
+.container_16 .push_15 {
+  left: 900px; }
+
+/* `Pull Space >> Global
+----------------------------------------------------------------------------------------------------*/
+.container_12 .pull_3, #main-container .pull_3,
+.container_16 .pull_4 {
+  left: -240px; }
+
+.container_12 .pull_6, #main-container .pull_6,
+.container_16 .pull_8 {
+  left: -480px; }
+
+.container_12 .pull_9, #main-container .pull_9,
+.container_16 .pull_12 {
+  left: -720px; }
+
+/* `Pull Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+.container_12 .pull_1, #main-container .pull_1 {
+  left: -80px; }
+
+.container_12 .pull_2, #main-container .pull_2 {
+  left: -160px; }
+
+.container_12 .pull_4, #main-container .pull_4 {
+  left: -320px; }
+
+.container_12 .pull_5, #main-container .pull_5 {
+  left: -400px; }
+
+.container_12 .pull_7, #main-container .pull_7 {
+  left: -560px; }
+
+.container_12 .pull_8, #main-container .pull_8 {
+  left: -640px; }
+
+.container_12 .pull_10, #main-container .pull_10 {
+  left: -800px; }
+
+.container_12 .pull_11, #main-container .pull_11 {
+  left: -880px; }
+
+/* `Pull Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+.container_16 .pull_1 {
+  left: -60px; }
+
+.container_16 .pull_2 {
+  left: -120px; }
+
+.container_16 .pull_3 {
+  left: -180px; }
+
+.container_16 .pull_5 {
+  left: -300px; }
+
+.container_16 .pull_6 {
+  left: -360px; }
+
+.container_16 .pull_7 {
+  left: -420px; }
+
+.container_16 .pull_9 {
+  left: -540px; }
+
+.container_16 .pull_10 {
+  left: -600px; }
+
+.container_16 .pull_11 {
+  left: -660px; }
+
+.container_16 .pull_13 {
+  left: -780px; }
+
+.container_16 .pull_14 {
+  left: -840px; }
+
+.container_16 .pull_15 {
+  left: -900px; }
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+/* http://sonspring.com/journal/clearing-floats */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+.clearfix:before,
+.clearfix:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+.clearfix:after {
+  clear: both; }
+
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
+.clearfix {
+  zoom: 1; }
+
+body, html {
+  font-family: 'futura', sans-serif;
+  height: 100%;
+  background-color: #222;
+  color: white; }
+
+h1 a {
+  text-decoration: none;
+  color: inherit; }
+
+#main-container form {
+  display: block;
+  padding: 10px 10px; }
+  #main-container form .other-fields {
+    padding: 4px 0px;
+    color: #7b00af;
+    -moz-box-shadow: 4px 4px 2px 5px #222222, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+    -o-box-shadow: 4px 4px 2px 5px #222222, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+    -webkit-box-shadow: 4px 4px 2px 5px #222222, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+    box-shadow: 4px 4px 2px 5px #222222, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white; }
+    #main-container form .other-fields input {
+      display: block; }
+
+header {
+  padding: 0px 20px;
+  display: block;
+  height: 130px;
+  line-height: 60px;
+  width: 100%;
+  color: black;
+  -moz-box-shadow: -3px -4px 8px 2px #cccccc inset, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+  -o-box-shadow: -3px -4px 8px 2px #cccccc inset, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+  -webkit-box-shadow: -3px -4px 8px 2px #cccccc inset, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+  box-shadow: -3px -4px 8px 2px #cccccc inset, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+  background-color: #999999;
+  background-image: -moz-linear-gradient(top, #cccccc, #999999);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #cccccc), color-stop(1, #999999));
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+  header h1 {
+    font-size: 3em; }
+  header p {
+    font-size: 1em; }
+  header .normal {
+    color: white; }
+
+ul.startups li.startup {
+  border-bottom: 1px solid #ddd;
+  padding: 8px 10px; }
+
+.startup h3 {
+  font-size: 1.5em; }
+.startup h4 {
+  padding: 2px;
+  font-size: .85em; }
+.startup h5 {
+  padding: 2px;
+  font-size: .75em; }
+.startup .reason {
+  padding: 10px; }
+
+.white-button {
+  font-size: 2em;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #aaaaaa;
+  background-image: -moz-linear-gradient(top, white, #aaaaaa);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, white), color-stop(1, #aaaaaa));
+  -moz-box-shadow: 0px -1px 1px white inset, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+  -o-box-shadow: 0px -1px 1px white inset, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+  -webkit-box-shadow: 0px -1px 1px white inset, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+  box-shadow: 0px -1px 1px white inset, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+  padding: 2px 3px;
+  border: 1px solid #ddd; }
+  .white-button:hover {
+    border: 1px solid transparent;
+    text-decoration: none;
+    background-color: #7b00af;
+    background-image: -moz-linear-gradient(top, #ae22e2, #7b00af);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ae22e2), color-stop(1, #7b00af));
+    -moz-box-shadow: 0px -1px 1px rgba(174, 34, 226, 0.2), 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+    -o-box-shadow: 0px -1px 1px rgba(174, 34, 226, 0.2), 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+    -webkit-box-shadow: 0px -1px 1px rgba(174, 34, 226, 0.2), 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+    box-shadow: 0px -1px 1px rgba(174, 34, 226, 0.2), 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+    text-shadow: -1px -1px 0 #59008d;
+    color: white;
+    cursor: pointer; }
+  .white-button:active {
+    background-color: #7b00af;
+    background-image: -moz-linear-gradient(top, #5b006f, #7b00af);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5b006f), color-stop(1, #7b00af));
+    -moz-box-shadow: 0px -1px 1px rgba(123, 0, 175, 0.2), 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+    -o-box-shadow: 0px -1px 1px rgba(123, 0, 175, 0.2), 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+    -webkit-box-shadow: 0px -1px 1px rgba(123, 0, 175, 0.2), 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+    box-shadow: 0px -1px 1px rgba(123, 0, 175, 0.2), 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white, 0 0 0 0px white;
+    text-shadow: -1px -1px 0 #59008d;
+    color: white; }
+
+input.white-button {
+  border: 1px solid transparent; }
+
+.token-input-delete-token {
+  cursor: pointer; }

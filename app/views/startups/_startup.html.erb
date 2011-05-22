@@ -1,0 +1,9 @@
+<li class="startup">
+	<h3 class="name"><%= startup.name%></h3>
+	<h4 class="website"><%= link_to startup.website do %><%= startup.website%><%end%></h4> 
+	<h5>Born: <%= startup.born.strftime("%m/%d/%Y")%>, Died: <%= startup.died.strftime("%m/%d/%Y")%></h5>
+	<div class="reason newlines"><%= startup.reason%></div>
+	<ul class="tags">
+		<%= render startup.tags%>
+	</ul>
+</li>

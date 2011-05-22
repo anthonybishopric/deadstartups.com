@@ -1,0 +1,76 @@
+// ==== CSS3 SASS MIXINS ==== 
+// https://github.com/madr/css3-sass-mixins
+
+//  Should IE filters be used or not?
+//  PROS: gradients, drop shadows etc will be handled by css.
+//  CONS: will harm the site performance badly, 
+//        especially on sites with heavy rendering and scripting. 
+$useIEFilters: 0; // might be 0 or 1. disabled by default.
+
+@mixin border-radius ($values) {
+  -moz-border-radius: $values;
+  -webkit-border-radius: $values;
+  border-radius: $values;
+}
+
+//accepts up to 5 box shadow arguments.
+@mixin box-shadow($arg, $arg2: 0 0 0 0px white, $arg3: 0 0 0 0px white, $arg4: 0 0 0 0px white, $arg5: 0 0 0 0px white){
+   -moz-box-shadow: $arg, $arg2, $arg3, $arg4, $arg5;
+   -o-box-shadow: $arg, $arg2, $arg3, $arg4, $arg5;
+   -webkit-box-shadow: $arg, $arg2, $arg3, $arg4, $arg5;
+   box-shadow: $arg, $arg2, $arg3, $arg4, $arg5;
+}
+
+@mixin linear-gradient($from, $to, $ie: $useIEFilters) {
+  @if $ie != 1 {
+    background-color: $to;
+  }
+  
+  background-image: -moz-linear-gradient(top, $from, $to);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $from),color-stop(1, $to));
+  
+  @if $ie == 1 { 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+    -ms-filter: quote(progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}'));
+  }
+}
+
+@mixin rgba($hex, $alpha, $ie: $useIEFilters) {     
+  @if $ie == 1 { 
+    // this formula is not accurate enough, will be fixed with sass 3.1
+    $hexopac: '#' + ceil((($alpha * 255)/16) *10) + $hex;
+    background-color: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$hexopac}',EndColorStr='#{$hexopac}}');
+    -ms-filter: quote(progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$hexopac}',EndColorStr='#{$hexopac}'));
+  }
+  @else {
+    background-color: $hex;
+    background-color: rgba(red($hex), green($hex), blue($hex), $alpha);
+  }
+}
+
+@mixin rotate ($deg, $ie: $useIEFilters) {
+  -moz-transform: rotate(#{$deg}deg);
+  -o-transform: rotate(#{$deg}deg);
+  -webkit-transform: rotate(#{$deg}deg);
+  // not ready, impediment: cos required!
+  //@if $ie == 1 {
+  //  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.99144486137381, M12=--0.130526192220052, M21=0.130526192220052, M22=0.99144486137381);
+  //  -ms-filter: quote(progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.99144486137381, M12=--0.130526192220052, M21=0.130526192220052, M22=0.99144486137381));
+  //  zoom: 1;
+  //}
+}
+
+@mixin box-sizing($arg){
+	box-sizing: $arg;
+	-webkit-box-sizing:$arg;
+	-moz-box-sizing:$arg;
+}
+
+@mixin transition ($value) {
+  -moz-transition: $value;
+  -o-transition: $value;
+  -webkit-transition: $value;
+  transition: $value;
+}
+// ==== /CSS3 SASS MIXINS ====
