@@ -4,16 +4,16 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-# 
-# module ::Deadstartups
-#   class Application
-#     include Rake::DSL
-#   end
-# end
-# 
-# module ::RakeFileUtils
-#   extend Rake::FileUtilsExt
-# end
-# 
+
+module ::Deadstartups
+  class Application
+    include Rake::DSL
+  end
+end
+
+module ::RakeFileUtils
+  extend Rake::FileUtilsExt
+end
+
 
 Deadstartups::Application.load_tasks
