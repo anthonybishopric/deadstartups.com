@@ -5,6 +5,9 @@ class Startup < ActiveRecord::Base
   validates_presence_of :name, :reason, :born, :died
   validates_format_of :website, :with => URI::regexp(%w(http https))
   
+  has_many :validations
+  has_many :assumptions, :through => :validations
+  
   has_and_belongs_to_many :tags
   
   scope :named, lambda {|query| 

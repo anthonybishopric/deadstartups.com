@@ -1,0 +1,9 @@
+<li>
+	<span class="big"><%= assumption.value %></span>
+	<div class="assumption-validations">
+		<h3><%= assumption.validations.size%> Validations attached to this assumption</h3>
+		<ul class="validations">
+		<%= render assumption.validations %>
+		</ul>
+	</div>
+</li>

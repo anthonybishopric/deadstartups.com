@@ -4,6 +4,10 @@
 
 $d_purple: #7B00aF;
 
+@mixin font-scary(){
+	font-family: "bodedo-1","bodedo-2",sans-serif;
+}
+
 body, html{
 	font-family: 'futura', sans-serif;
 	height: 100%;
@@ -12,9 +16,28 @@ body, html{
 
 }
 
+.hidden{
+	display:none;
+}
+
 h1 a{
+	
 	text-decoration:none;
 	color: inherit;
+}
+
+a{
+	color: #0ff;
+}
+
+.navigation{
+
+	font-size: 1.3em;
+
+	a{
+
+		color: white;
+	}
 }
 
 #main-container{
@@ -71,6 +94,7 @@ ul.startups{
 		border-bottom:1px solid #ddd;
 		padding: 8px 10px;
 	}
+
 }
 
 .startup{
@@ -88,10 +112,21 @@ ul.startups{
 	.reason{
 		padding: 10px;
 	}
+	.tags{
+		padding-bottom: 4px;
+	}
+	.validations{
+		li{
+			border-top: 1px solid #444;
+			padding: 3px 0px;
+			margin: 20px 10px;
+		
+		}
+		
+	}
 }
 
 .white-button{
-	font-size:2em;
 	@include border_radius(8px);
 	@include linear_gradient(#fff, #aaa);
 	@include box-shadow(0px -1px 1px #fff inset);
@@ -115,10 +150,135 @@ ul.startups{
 
 }
 
+.tags, .token-input-token{
+	 @include font-scary();
+
+	font-size:.75em;
+	a{
+		text-decoration:none;
+		color: #eee;		
+
+	}
+	li, p{
+		display: inline-block;
+		padding: 4px 2px;
+		@include border_radius(4px);
+		@include linear_gradient($d_purple + #555, $d_purple + #222);
+		margin: 0px 2px;
+		color: #eee;	
+	}
+}
+
+.big{
+	font-size:2em;
+}
+
 input.white-button{
 	border: 1px solid transparent;
 }
 
 .token-input-delete-token{
 	cursor: pointer;
+}
+
+.validation-explanation{
+	margin:25px 0px;
+}
+
+.error{
+	color: #ff0;
+	display: inline;
+	font-size: .65em;
+	
+}
+
+input.error{
+	color:#990;
+}
+
+.examples{
+	ul{
+		list-style-type: square;
+		li{
+			font-size:1.4em;
+			margin:10px 0px;
+			@include font-scary();
+		}
+	}
+}
+
+.blurred{
+	color: #ddd;
+
+}
+
+.assumptions{
+	li{		
+		list-style-type: square;
+		border-bottom: 1px solid #eee;
+		padding: 30px 0px;
+		.big{
+			@include font-scary();
+		}
+	}
+	.validations{
+		padding-left:30px;
+		border:0;
+		li{
+			border: 0px;
+		}
+	}
+}
+
+
+div.token-input-dropdown {
+    position: absolute;
+    width: 400px;
+    background-color: #fff;
+    overflow: hidden;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    cursor: default;
+    font-size: 11px;
+    font-family: Verdana;
+    z-index: 1;
+}
+
+.token-input-dropdown p {
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+    color: #777;
+}
+
+.token-input-dropdown ul {
+    margin: 0;
+    padding: 0;
+}
+
+.token-input-dropdown ul li {
+    background-color: #fff;
+	color: black;
+    padding: 3px;
+    margin: 0;
+    list-style-type: none;
+}
+
+.token-input-dropdown ul li.token-input-dropdown-item {
+    background-color: #fff;
+}
+
+.token-input-dropdown ul li.token-input-dropdown-item2 {
+    background-color: #fff;
+}
+
+.token-input-dropdown ul li em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.token-input-dropdown ul li.token-input-selected-dropdown-item {
+    background-color: #3b5998;
+    color: #fff;
 }

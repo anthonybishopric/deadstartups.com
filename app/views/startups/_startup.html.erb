@@ -6,4 +6,26 @@
 	<ul class="tags">
 		<%= render startup.tags%>
 	</ul>
+	<h4><%= startup.name%> has <%= pluralize startup.validations.size, "validation"%></h4>
+	<ol id="<%= startup.id%>-validations" class="validations">
+		<%= render startup.validations%>
+	</ol>
+	
+	
+	<h4>Add a new Validation to <%= startup.name%></h4>
+	<%= form_for Validation.new, :remote => true, :html => {:honeypot => true, :class => 'validated', :disable_with => 'adding..', :id => "new-validation-#{startup.id}"} do |form| %>
+	
+		<%= form.hidden_field :startup_id, :value => startup.id %>
+		<%= form.text_field :assumption_id, :class => 'assumption-search required'%>
+		
+		<div class="validation-explanation">
+		<div>
+		<%= form.label :confirms, "Did #{startup.name} validate this assumption?"%>
+		<%= form.check_box :confirms%>
+		</div>
+		<%= form.label :how, "How did #{startup.name} validate or invalidate this assumption?"%>
+		<%= form.text_area :how, :rows => 4, :cols => 100, :class => 'required'%>
+		</div>	
+		<%= form.submit :class => 'white-button' %>
+	<%end%>
 </li>

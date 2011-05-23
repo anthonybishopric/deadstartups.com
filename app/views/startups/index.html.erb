@@ -18,22 +18,22 @@
 
 
 	<span class="other-fields">
-	<%= form.label :name%>
-	<%= form.text_field :name , :class => 'required'%>
-	<%= form.label :website%>
-	<%= form.text_field :website, :class => 'url required', :value => 'http://' %>
-	<%= form.label :born%>
-	<%= form.text_field :born, :class => 'date required'%>
-	<%= form.label :died%>
-	<%= form.text_field :died, :class => 'date required'%>
-	<%= form.label :tag_id_list, "Tags"%>
-	<%= form.text_field :tag_id_list, :id => 'tags', :class => 'required'%>
+		<%= form.label :name%>
+		<%= form.text_field :name , :class => 'required'%>
+		<%= form.label :website%>
+		<%= form.text_field :website, :class => 'url required', :value => 'http://' %>
+		<%= form.label :born%>
+		<%= form.text_field :born, :class => 'date required'%>
+		<%= form.label :died%>
+		<%= form.text_field :died, :class => 'date required'%>
+		<%= form.label :tag_id_list, "Tags"%>
+		<%= form.text_field :tag_id_list, :id => 'tags', :class => 'required'%>
 	</span>
 	<span class="reason">
 		<%= form.label :reason%>
 		<%= form.text_area :reason, :class => 'required'%>
 	</span>
 	<span class="rip">
-	<%= form.submit 'Rest in Peace', :class => 'white-button'%>
+	<%= form.submit 'Rest in Peace', :class => 'white-button big'%>
 	</span>
 <%end%>

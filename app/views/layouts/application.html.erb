@@ -17,9 +17,12 @@
 <div id="main-container">
 	<header>
 		<h1><%= link_to root_path do %><span class="dead tk-bodedo">Dead</span><span class="normal">Startups</span><%end%></h1>
-	<p class="headline">Keeping track of startups that have failed. Instead of forgetting them, lets learn from their mistakes.</p>	
+	<p class="headline">Instead of forgetting them, let's learn from their mistakes.</p>	
 	</header>
-
+	
+	<span class="navigation">
+	<%= link_to startups_path do%>Startups<%end%> | <%= link_to  assumptions_path do%>Assumptions<%end%>
+	</span>
 	<%=yield%>
 
 </div>

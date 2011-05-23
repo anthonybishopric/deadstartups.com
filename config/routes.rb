@@ -6,6 +6,10 @@ Deadstartups::Application.routes.draw do
    end
  end
  resources :tags
+
+ resources :validations
+ 
+ resources :assumptions
  
  root :to => "startups#index"
  

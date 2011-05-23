@@ -55,4 +55,33 @@ $(function(){
 		preventDuplicates: true
 	});
 	
+	$(".assumption-search").each(function(){
+		$(this).tokenInput("/assumptions.json", {
+			tokenLimit: 1
+		});
+	});
+	
+	$(".loaded").each(function(){
+		var $$ = $(this);
+		var loading_img = $$.find(".loading");
+		var inputs = $$.find("input").toArray().concat($$.find("textarea").toArray());
+		
+		$$.bind('ajax:beforeSend', function(){		
+			$.each(inputs, disable);
+			
+			if(loading_img){
+				loading_img.show();
+			}
+		});
+		
+		$$.bind('ajax:error', function(){
+				$.each(inputs, enable);
+			
+				if(loading_img){
+					loading_img.hide();
+				}
+			});
+		
+	});
+	
 });

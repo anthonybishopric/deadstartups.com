@@ -1,0 +1,6 @@
+var validation = $("<span style='background-color:#666'>");
+validation.addClass('hidden');
+validation.html("<%= escape_javascript(render :partial => @validation) %>");
+var startup_validations = $("#<%= @validation.startup.id%>-validations");
+startup_validations.append(validation);
+validation.fadeIn('slow');

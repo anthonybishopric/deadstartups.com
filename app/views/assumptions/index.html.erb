@@ -1,0 +1,25 @@
+<div class="new-assumption">
+<%= form_for Assumption.new , :html => {:honeypot => true, :class => 'validated'} do |a|%>
+	
+	<%= a.label :value, 'Assumption (phrase as a statement of fact)'%>
+	<div>
+	<%= a.text_area :value, :rows => 1, :cols => 100, :class => 'required'%>
+	</div>
+	<%= a.submit%>
+<%end%>
+
+
+<ul class="assumptions">
+<%= render @assumptions%>
+</ul>
+
+
+<div class="examples">
+	Some examples of assumptions:
+	<ul>
+		<li>Friends of users will want to see the users' purchases.</li> 
+		<li>Users will spend 15 minutes per day organizing their to-do lists.</li>
+		<li>Users will sign up and use a more social email client on a daily basis.</li>
+	</ul>
+</div>
+</div>
